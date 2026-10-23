@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "desktop-pet": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "./dsh-pet/bridge/mcp.mjs"
+      ],
+      "cwd": "."
+    }
+  }
+}

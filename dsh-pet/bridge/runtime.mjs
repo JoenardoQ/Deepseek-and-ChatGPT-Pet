@@ -1,0 +1,24 @@
+import { existsSync, readFileSync } from 'node:fs';
+import path from 'node:path';
+import os from 'node:os';
+import { fileURLToPath } from 'node:url';
+export const root = fileURLToPath(new URL('../', import.meta.url));
+import userPaths from './user-paths.cjs';
+const userData = path.join(process.env.LOCALAPPDATA || os.homedir(), 'DesktopPet');
+export const dataDir = userPaths.resolveDataDir();
+export const port = Number(process.env.PET_PORT || 19420);
+if (!Number.isInteger(port) || port < 1024 || port > 65535) throw new Error('Invalid PET_PORT');
+export const base = `http://127.0.0.1:${port}`;
+export function config() {
+  const file = path.join(dataDir, 'config.json');
+  return existsSync(file) ? JSON.parse(readFileSync(file, 'utf8').replace(/^\uFEFF/, '')) : {};
+}
+export function nodeCommand() {
+  if (process.env.PET_NODE) return process.env.PET_NODE;
+  const portable = path.join(root, 'runtime/node/node.exe');
+  if (existsSync(portable)) return portable;
+  return process.env.PET_NODE || process.execPath;
+}
+
+export const dshHome = process.env.DSH_HOME || path.join(userData, 'dsh');
+export const electronPath = process.env.DSH_PET_ELECTRON_PATH || path.join(dshHome, 'electron/electron.exe');

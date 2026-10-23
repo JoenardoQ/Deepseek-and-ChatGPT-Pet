@@ -1,0 +1,29 @@
+name: Desktop pet checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: dsh-pet/package-lock.json
+      - run: npm --prefix dsh-pet ci --legacy-peer-deps
+      - run: npm run build
+      - run: npm run typecheck
+      - run: npm test
+      - run: npx --prefix dsh-pet playwright install --with-deps chromium
+      - run: node scripts/test-render.mjs
+      - run: npm run pack
+      - uses: actions/upload-artifact@v4
+        with:
+          name: desktop-pet
+          path: |
+            dist/*.tar.gz
+            dist/*.sha256
+            .qa/gallery-*.png
+            .qa/render-results.json

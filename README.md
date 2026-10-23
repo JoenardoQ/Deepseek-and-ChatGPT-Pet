@@ -15,7 +15,7 @@
 
 ChatGPT 的视频/GIF 播放分支和旧动作媒体不在本仓库中。原 107 个细分动作标识映射到 24 个语义姿势；这不是 107 张独立新图。计时只决定动作何时结束或窗口怎样移动，不连续解码图片帧。
 
-![ChatGPT 基础静态姿势](dsh-pet/assets/pets/chatgpt/images/core.png)
+![24 个静态姿势与 8 个双人场景](docs/images/actions-overview.png)
 
 动作与图像制作顺序：**参考两个 DeepSeek 桌宠 → 定义动作类型 → 编写每张图集的 prompt → 生成透明 PNG → 检查浅色/深色背景和真实窗口**。详细记录见 [动作设计](docs/chatgpt-actions.md)、[动作及 prompts](art-source/action-plan.json)、[旧动作映射](art-source/legacy-action-map.json)、[制作溯源](art-source/generation.json)。
 

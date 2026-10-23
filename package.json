@@ -1,0 +1,91 @@
+{
+  "name": "deepseek-chatgpt-desktop-pet",
+  "version": "2.0.0",
+  "description": "可扩展的 DeepSeek / ChatGPT 桌宠，角色包、共享交互引擎和宿主适配分层。",
+  "icon": "dsh-pet/assets/logo.png",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "desktop-pet",
+    "pet",
+    "floating-widget",
+    "web-ui",
+    "cordis",
+    "react"
+  ],
+  "homepage": "https://github.com/JoenardoQ/Deepseek-and-ChatGPT-Pet#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoenardoQ/Deepseek-and-ChatGPT-Pet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JoenardoQ/Deepseek-and-ChatGPT-Pet/issues"
+  },
+  "type": "module",
+  "main": "./dsh-pet/lib/index.js",
+  "bin": {
+    "dsh-pet-standalone": "dsh-pet/lib/standalone.js"
+  },
+  "exports": {
+    ".": "./dsh-pet/lib/index.js",
+    "./client": "./dsh-pet/lib/client.js",
+    "./cordis.patch.yml": "./dsh-pet/cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dsh-pet",
+    "docs",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "scripts": {
+    "build": "npm --prefix dsh-pet run build",
+    "test": "npm --prefix dsh-pet test && node --test test/*.test.mjs",
+    "typecheck": "npm --prefix dsh-pet run typecheck",
+    "pet": "node dsh-pet/bridge/cli.mjs",
+    "pack": "node scripts/package.mjs"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "@electron-internal/extract-zip": "^1.0.5",
+    "@electron/get": "^5.1.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./dsh-pet/cordis.patch.yml"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.1.7-rc.2": "incompatible",
+        "0.2.0-rc.1": "compatible",
+        "0.2.0-rc.2": "compatible"
+      }
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-connection"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.4",
+    "@deepseek-ai/dsh-agent-default-model": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-client-connection": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-client-ui-primitives": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-client-ui-slots": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-commands": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-credentials": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-home-paths": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-host-webserver": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-llm": "^0.2.0-rc.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "private": true
+}

@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.qa/
+*.log
+runtime-data/
+dsh-pet/bridge/local.json

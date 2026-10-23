@@ -1,0 +1,24 @@
+{
+  "schema": 3,
+  "defaultByHost": {
+    "dsh": "fish",
+    "chatgpt": "chatgpt"
+  },
+  "characters": [
+    {
+      "id": "fish",
+      "manifest": "fish/pet.json"
+    },
+    {
+      "id": "whale",
+      "manifest": "whale/pet.json"
+    },
+    {
+      "id": "chatgpt",
+      "manifest": "chatgpt/pet.json"
+    }
+  ],
+  "duo": {
+    "manifest": "duo/actions.json"
+  }
+}

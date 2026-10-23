@@ -1,0 +1,20 @@
+{
+  "name": "desktop-pet",
+  "interface": {
+    "displayName": "DeepSeek & ChatGPT 桌宠"
+  },
+  "plugins": [
+    {
+      "name": "desktop-pet",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

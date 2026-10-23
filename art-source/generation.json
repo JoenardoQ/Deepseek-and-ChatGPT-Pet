@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "date": "2026-10-23",
+  "tool": "built-in image_gen",
+  "method": "Action taxonomy, per-sheet prompts, four transparent still atlases, one cleanup pass; no video or GIF encoding.",
+  "prompts": {
+    "actionPlan": "art-source/action-plan.json",
+    "duo": "art-source/duo-prompt.txt",
+    "cleanup": "art-source/cleanup-prompt.txt"
+  },
+  "review": {
+    "technical": "32 cells checked in browser on light and dark backgrounds and in native Electron. See validation notes.",
+    "aesthetic": "Not user-approved. Remaining fine edge artifacts may need further art review."
+  },
+  "outputs": [
+    {
+      "path": "dsh-pet/assets/pets/chatgpt/images/core.png",
+      "sha256": "56b22e2d8000be5eeb3e0c162abc4b1546f54cda176e65507ca53ee7817a49f5",
+      "width": 1774,
+      "height": 887,
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "path": "dsh-pet/assets/pets/chatgpt/images/daily.png",
+      "sha256": "75a438f574428c051e9f9de5e522dd313c987735dfdea5faa01d449901416101",
+      "width": 1774,
+      "height": 887,
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "path": "dsh-pet/assets/pets/chatgpt/images/activity.png",
+      "sha256": "320111220396e0b69b6151ccd7ee7666e75867aed4a8f2084e39b8714898b06d",
+      "width": 1774,
+      "height": 887,
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "path": "dsh-pet/assets/pets/duo/images/scenes.png",
+      "sha256": "8a526639b37ba2ec4a8b4a26dedd8616e27f393b7a758995692a026fdb851fb5",
+      "width": 1774,
+      "height": 887,
+      "columns": 4,
+      "rows": 2
+    }
+  ]
+}

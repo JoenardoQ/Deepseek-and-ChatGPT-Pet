@@ -1,0 +1,314 @@
+[
+  {
+    "id": "idle",
+    "label": "端庄待机",
+    "category": "基础",
+    "file": "images/core.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 0
+    }
+  },
+  {
+    "id": "blink",
+    "label": "俏皮眨眼",
+    "category": "基础",
+    "file": "images/core.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 1
+    }
+  },
+  {
+    "id": "wave",
+    "label": "挥手问候",
+    "category": "互动",
+    "file": "images/core.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 2
+    }
+  },
+  {
+    "id": "shy",
+    "label": "被夸害羞",
+    "category": "互动",
+    "file": "images/core.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 3
+    }
+  },
+  {
+    "id": "thinking",
+    "label": "认真思考",
+    "category": "工作",
+    "file": "images/core.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 4
+    }
+  },
+  {
+    "id": "working",
+    "label": "专心工作",
+    "category": "工作",
+    "file": "images/core.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 5
+    }
+  },
+  {
+    "id": "success",
+    "label": "完成庆祝",
+    "category": "工作",
+    "file": "images/core.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 6
+    }
+  },
+  {
+    "id": "error",
+    "label": "遇到困难",
+    "category": "工作",
+    "file": "images/core.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 7
+    }
+  },
+  {
+    "id": "waiting",
+    "label": "等待确认",
+    "category": "工作",
+    "file": "images/daily.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 0
+    }
+  },
+  {
+    "id": "review",
+    "label": "核对结果",
+    "category": "工作",
+    "file": "images/daily.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 1
+    }
+  },
+  {
+    "id": "balance",
+    "label": "检查用量",
+    "category": "工作",
+    "file": "images/daily.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 2
+    }
+  },
+  {
+    "id": "sleeping",
+    "label": "蜷尾小憩",
+    "category": "生活",
+    "file": "images/daily.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 3
+    }
+  },
+  {
+    "id": "wake",
+    "label": "睡醒揉眼",
+    "category": "生活",
+    "file": "images/daily.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 4
+    }
+  },
+  {
+    "id": "stretch",
+    "label": "放松伸展",
+    "category": "生活",
+    "file": "images/daily.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 5
+    }
+  },
+  {
+    "id": "tea",
+    "label": "捧杯喝茶",
+    "category": "生活",
+    "file": "images/daily.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 6
+    }
+  },
+  {
+    "id": "snack",
+    "label": "偷吃点心",
+    "category": "生活",
+    "file": "images/daily.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 7
+    }
+  },
+  {
+    "id": "reading",
+    "label": "安静阅读",
+    "category": "生活",
+    "file": "images/activity.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 0
+    }
+  },
+  {
+    "id": "garden",
+    "label": "照看花草",
+    "category": "生活",
+    "file": "images/activity.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 1
+    }
+  },
+  {
+    "id": "bow",
+    "label": "提裙行礼",
+    "category": "互动",
+    "file": "images/activity.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 2
+    }
+  },
+  {
+    "id": "walk",
+    "label": "轻步散步",
+    "category": "移动",
+    "file": "images/activity.png",
+    "kind": "image",
+    "durationMs": 10000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 3
+    }
+  },
+  {
+    "id": "run",
+    "label": "轻快小跑",
+    "category": "移动",
+    "file": "images/activity.png",
+    "kind": "image",
+    "durationMs": 10000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 4
+    }
+  },
+  {
+    "id": "drag",
+    "label": "被提起反应",
+    "category": "互动",
+    "file": "images/activity.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 5
+    }
+  },
+  {
+    "id": "magic",
+    "label": "掌心星光",
+    "category": "生活",
+    "file": "images/activity.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 6
+    }
+  },
+  {
+    "id": "play",
+    "label": "休闲游戏",
+    "category": "生活",
+    "file": "images/activity.png",
+    "kind": "image",
+    "durationMs": 4000,
+    "cell": {
+      "columns": 4,
+      "rows": 2,
+      "index": 7
+    }
+  }
+]
