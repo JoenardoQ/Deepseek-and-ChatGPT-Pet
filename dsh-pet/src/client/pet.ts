@@ -336,7 +336,7 @@ export function makePetUI(rt: {
             video.classList.remove('is-front');
           }
         }
-        
+
         imageRef.current
           .play(assetUrl, nextOnce, handleEnded, media.cell, media.durationMs)
           .then(() => {

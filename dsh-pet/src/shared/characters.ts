@@ -45,6 +45,7 @@ export const characterState = function state(name: string): string {
   return 'idle';
 };
 export function characterAnimation(id: CharacterId, name: string): string {
+  if (getPetPack(id).menu === 'upstream' && !name.startsWith('__pack-')) return name;
   return resolvePackAction(id, name, characterState(name)).id;
 }
 export function characterLabel(id: CharacterId): string {

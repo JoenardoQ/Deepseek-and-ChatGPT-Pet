@@ -39,7 +39,7 @@ export function createBridge({ launch = true } = {}) {
     return {
       service: 'desktop-pet',
       version: 1,
-      build: '2.0.0',
+      build: '2.0.1',
       pid: process.pid,
       shuttingDown,
       visible: control.visible || online.has('dsh'),

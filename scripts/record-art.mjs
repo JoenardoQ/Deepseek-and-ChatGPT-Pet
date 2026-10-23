@@ -19,15 +19,16 @@ writeFileSync(
     {
       schema: 1,
       date: "2026-10-23",
-      tool: "built-in image_gen",
+      tool: "built-in image_gen; user-authorized Pillow/NumPy alpha cleanup",
       method:
-        "Action taxonomy, per-sheet prompts, four transparent still atlases, one cleanup pass; no video or GIF encoding.",
+        "Action taxonomy, per-sheet prompts, four transparent still atlases, then connected matte and clipped chroma removal. Surviving RGB pixels are unchanged. No video or GIF encoding.",
+      cleanup: { script: "scripts/clean-atlases.py", report: "art-source/cleanup-report.json" },
       prompts,
       review: {
         technical:
           "32 cells checked in browser on light and dark backgrounds and in native Electron. See validation notes.",
         aesthetic:
-          "Not user-approved. Remaining fine edge artifacts may need further art review.",
+          "White matte and colored speckles removed with a constrained alpha mask; inspected on light/dark backgrounds. Character design is unchanged. This is an engineering visual review, not a claim of user art approval.",
       },
       outputs: files.map((f) => {
         const path = "dsh-pet/assets/pets/" + f,

@@ -376,7 +376,7 @@ class PetSprite {
       for (const video of [this.videoA, this.videoB]) {
         video.onended = null; video.pause(); video.classList.remove('is-front');
       }
-      
+
       this.imagePlayer.play(BASE + media.path, nextOnce, () => this.handleEnded(), media.cell, media.durationMs).then(() => {
         if (this.gen === gen) { this.pending = null; this.imagePlayer.canvas.style.transform=this.facing==='right'?'scaleX(-1)':''; if(this.pendingMove)this.startMoveDrive(this.imagePlayer); if(this.pendingSquash){this.pendingSquash=false;this.startSquash(this.imagePlayer.canvas);} }
       }).catch(error => { if (this.gen === gen) { this.pending = null; this.showWhisper(error.message); } });

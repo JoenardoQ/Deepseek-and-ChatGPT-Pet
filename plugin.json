@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "desktop-pet",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "可扩展的 DeepSeek 与 ChatGPT 桌宠，提供本机透明窗口和状态交互。",
   "author": {
     "name": "Qiao, Yanning / JoenardoQ"

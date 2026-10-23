@@ -122,7 +122,7 @@ test("HTTP contract supports desktop only, rejects device routes and hostile req
         character: source === "dsh" ? "fish" : "chatgpt",
         desktop: true,
         instanceId: source,
-        build: "2.0.0",
+        build: "2.0.1",
         error: null,
       });
     await presence("dsh");

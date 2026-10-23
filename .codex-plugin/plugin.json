@@ -1,6 +1,6 @@
 {
   "name": "desktop-pet",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "三种可切换桌宠，共享角色包接口与桌面交互。",
   "mcpServers": "./.mcp.json",
   "requires_local_executor": true

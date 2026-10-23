@@ -93,7 +93,7 @@ export async function dispatch(request) {
     return reply({
       protocolVersion: versions.includes(params?.protocolVersion) ? params.protocolVersion : '2025-06-18',
       capabilities: { tools: {} },
-      serverInfo: { name: 'desktop-pet', version: '2.0.0' },
+      serverInfo: { name: 'desktop-pet', version: '2.0.1' },
     });
   }
   if (method === 'ping') return reply({});

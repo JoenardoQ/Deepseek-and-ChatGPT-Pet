@@ -60,10 +60,12 @@ test("desktop publish tree contains no screen implementation or legacy ChatGPT a
   for (const p of ["plugin.json", ".codex-plugin/plugin.json"]) {
     const manifest = json(p);
     assert.equal(manifest.name, "desktop-pet");
-    assert.equal(manifest.version, "2.0.0");
+    assert.equal(manifest.version, "2.0.1");
   }
   assert.equal(
     json("package.json").bin["dsh-pet-standalone"],
     "dsh-pet/lib/standalone.js",
   );
+  assert.equal(json("package.json").name, "dsh-pet", "DSH resolves the bundle by its package name");
+  assert.match(readFileSync("dsh-pet/cordis.patch.yml", "utf8"), /name: 'dsh-pet'/);
 });

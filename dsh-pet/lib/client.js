@@ -130,7 +130,7 @@ async function resizePet(base, petId, action) {
 //#endregion
 //#region package.json
 var name = "dsh-pet";
-var version = "2.0.0";
+var version = "2.0.1";
 var description = "可扩展的 DeepSeek / ChatGPT 桌宠，角色包、共享交互引擎和宿主适配分层。";
 var icon = "assets/logo.png";
 var keywords = [
@@ -178,6 +178,7 @@ var files = [
 ];
 var scripts = {
 	"build": "node ../scripts/generate-pack-index.mjs && npm run bundle && npm run build:desktop-core && npm run types",
+	"ensure:electron": "node scripts/ensure-electron.mjs",
 	"bundle": "tsdown",
 	"build:desktop-core": "node scripts/build-desktop-core.mjs",
 	"types": "node scripts/gen-types.mjs",

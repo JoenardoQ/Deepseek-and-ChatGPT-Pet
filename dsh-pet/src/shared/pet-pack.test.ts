@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { getPetPack, petPacks, validatePetPack, registerPetPack, resolvePackAction } from './pet-pack';
-import { characterMedia, characterMenu, characterActionMenu, characterPrompt } from './characters';
+import { characterMedia, characterMenu, characterActionMenu, characterPrompt, characterAnimation } from './characters';
 import { decideAnim } from '../host/anim';
 test('all three built-in pets use the same validated pack contract', () => {
   assert.equal(petPacks().length, 3);
@@ -21,6 +21,7 @@ test('all ChatGPT actions and old event aliases resolve to a static PNG', () => 
   assert.equal(resolvePackAction('chatgpt', '__princess-013').id, 'working');
   assert.equal(resolvePackAction('chatgpt', '__pack-chatgpt-garden').id, 'garden');
   assert.equal(characterMedia('fish', '写代码').kind, 'video');
+  assert.equal(characterAnimation('fish', '自定义动作'), '自定义动作');
   assert.equal(characterMedia('whale', '写代码').kind, 'video');
 });
 test('new pack drives menu, persona, media and host action API without engine edits', () => {

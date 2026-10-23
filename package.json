@@ -1,6 +1,6 @@
 {
-  "name": "deepseek-chatgpt-desktop-pet",
-  "version": "2.0.0",
+  "name": "dsh-pet",
+  "version": "2.0.1",
   "description": "可扩展的 DeepSeek / ChatGPT 桌宠，角色包、共享交互引擎和宿主适配分层。",
   "icon": "dsh-pet/assets/logo.png",
   "keywords": [
