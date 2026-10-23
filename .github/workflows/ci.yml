@@ -5,6 +5,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -16,7 +17,8 @@ jobs:
       - run: npm run build
       - run: npm run typecheck
       - run: npm test
-      - run: npx --prefix dsh-pet playwright install --with-deps chromium
+      - run: node dsh-pet/node_modules/playwright/cli.js install --with-deps chromium
+        timeout-minutes: 8
       - run: node scripts/test-render.mjs
       - run: npm run pack
       - uses: actions/upload-artifact@v4

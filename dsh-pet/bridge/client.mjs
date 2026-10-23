@@ -30,6 +30,15 @@ export async function status() {
 }
 let starting;
 export async function ensureBridge() {
+  // Keep short-lived CLI callers alive across unreferenced HTTP waits.
+  const keepAlive = setInterval(() => {}, 1000);
+  try {
+    return await ensureBridgeReady();
+  } finally {
+    clearInterval(keepAlive);
+  }
+}
+async function ensureBridgeReady() {
   try {
     let current = await status();
     if (olderBuild(current.build)) throw Error('需要加载当前插件的修复版桥接');
