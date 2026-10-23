@@ -5,8 +5,9 @@ import {
   copyFileSync,
   readFileSync,
   writeFileSync,
+  rmSync,
 } from "node:fs";
-import { resolve, join, dirname } from "node:path";
+import { resolve, join, dirname, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
@@ -16,6 +17,7 @@ execFileSync(process.execPath, [join(root, "dsh-pet/scripts/prepack-check.js")],
 mkdirSync(dist, { recursive: true });
 const staging = mkdtempSync(join(dist, "stage-")),
   target = join(staging, "desktop-pet");
+try {
 const roots = [
   "README.md",
   "LICENSE",
@@ -97,3 +99,7 @@ console.log(
     2,
   ),
 );
+} finally {
+  if (!resolve(staging).startsWith(resolve(dist) + sep + 'stage-')) throw Error('Unexpected package staging path');
+  rmSync(staging, {recursive:true,force:true});
+}
